@@ -27,18 +27,15 @@ public class EmpWageBuilder {
 						}
 						else 
 							System.out.println("Its a Part day");
-						
-						
-					}
+							wage = wage + (wagePerHr * PART_DAY_HR);
+						}
 					else {
 						System.out.println("Employee is absent");
-					}
+						}
 					
 					
 					
 					
-					
-					
-					
+						
 				}
 }
