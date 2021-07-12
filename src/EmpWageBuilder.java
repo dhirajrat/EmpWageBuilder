@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class EmpWageBuilder {
 				public static void main(String[] args) {
@@ -34,8 +35,22 @@ public class EmpWageBuilder {
 						}
 					
 					
+					Scanner ch = new Scanner(System.in);
 					
+					System.out.println("Enter your choice \n1.Wages perMonth \n2.Wages for a condition");
+					int choice = ch.nextInt();
 					
+					switch(choice) {
+					case 1:
 						
+						break;
+					case 2:
+						
+						break;
+						
+					default:
+						System.out.println("Invalid choice");
+						break;
+					}
 				}
 }
