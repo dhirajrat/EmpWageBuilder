@@ -21,7 +21,7 @@ public class EmpWageBuilder {
 					int IS_FULL_DAY = 1;
 					double dayType = Math.floor(Math.random()*10)%2;
 					
-					
+					// Conditional statements
 					if (empCheck == IS_FULL_TIME) {
 						System.out.println("Employee is present");
 						
