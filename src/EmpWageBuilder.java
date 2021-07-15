@@ -12,6 +12,10 @@ public class EmpWageBuilder {
 					int FULL_DAY_HR = 8;
 					int PART_DAY_HR = 4;
 					
+					int WORKING_DAYS_MONTH = 20;
+					int month_wage=0;
+					int i;
+					
 					int dailyWage;
 					int wage = 0;
 					int IS_FULL_DAY = 1;
@@ -40,10 +44,26 @@ public class EmpWageBuilder {
 					System.out.println("Enter your choice \n1.Wages perMonth \n2.Wages for a condition");
 					int choice = ch.nextInt();
 					
-					switch(choice) {
+					switch(choice) 
+					{
 					case 1:
 						
+						for(i=1;i<=WORKING_DAYS_MONTH;i++)
+						{
+							dayType = Math.floor(Math.random()*10)%2;
+							
+								if (dayType == IS_FULL_DAY) { 
+									System.out.println(i+ "th "+"Its a full day");
+									month_wage = month_wage + (wagePerHr * FULL_DAY_HR);
+								}
+								else 
+									System.out.println(i+ "th "+"Its a Part day");
+									month_wage = month_wage + (wagePerHr * PART_DAY_HR);
+								}
+					System.out.println("Wage Per Month "+month_wage);
+					
 						break;
+						
 					case 2:
 						
 						break;
