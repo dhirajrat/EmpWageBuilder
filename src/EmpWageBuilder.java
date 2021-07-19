@@ -1,13 +1,19 @@
 import java.util.Scanner;
 
-class OOPEmpWage
-{
-    int wagePerHr = 20;
-    int FULL_DAY_HR = 8;
-    int PART_DAY_HR = 4;
+	class OOPEmpWage
+	{
+    int wagePerHr;
+    int FULL_DAY_HR;
+    int PART_DAY_HR;
     int IS_FULL_DAY = 1;
     double dayType;
-
+	
+    public OOPEmpWage(int wagePerHr, int FULL_DAY_HR, int PART_DAY_HR)
+    {
+    	this.wagePerHr = wagePerHr;
+    	this.FULL_DAY_HR = FULL_DAY_HR;
+    	this.PART_DAY_HR = PART_DAY_HR;
+    }
     //Employee Check method
     public void empCheck(){
         //Computation
@@ -99,8 +105,14 @@ class OOPEmpWage
 public class EmpWageBuilder {
     public static void main(String[] args){
         System.out.println("Welcome");
-        OOPEmpWage obj = new OOPEmpWage();
-        obj.empCheck();
-        obj.empWage();
+        System.out.println("**** FOR Reliance");
+        OOPEmpWage reliance = new OOPEmpWage(20,8,6);
+        reliance.empCheck();
+        reliance.empWage();
+        
+        System.out.println("**** FOR Pantaloon");
+        OOPEmpWage pantaloon = new OOPEmpWage(30,9,5);
+        pantaloon.empCheck();
+        pantaloon.empWage();
     }
 }
